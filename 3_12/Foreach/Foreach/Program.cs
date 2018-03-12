@@ -19,7 +19,7 @@ namespace Foreach
 
         public static void PrintValues(ArrayList myList)
         {
-            foreach(string text in myList)
+            foreach (string text in myList)
             {
                 Console.Write("\t{0}", text);
             }
