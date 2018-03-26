@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictProfile = new System.Windows.Forms.PictureBox();
-            this.texUrl = new System.Windows.Forms.TextBox();
+            this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnChange = new System.Windows.Forms.Button();
             this.rdoNormal = new System.Windows.Forms.RadioButton();
             this.rdoStretchImage = new System.Windows.Forms.RadioButton();
@@ -57,12 +57,12 @@
             this.pictProfile.TabIndex = 0;
             this.pictProfile.TabStop = false;
             // 
-            // texUrl
+            // txtUrl
             // 
-            this.texUrl.Location = new System.Drawing.Point(56, 24);
-            this.texUrl.Name = "texUrl";
-            this.texUrl.Size = new System.Drawing.Size(422, 25);
-            this.texUrl.TabIndex = 1;
+            this.txtUrl.Location = new System.Drawing.Point(56, 24);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(422, 25);
+            this.txtUrl.TabIndex = 1;
             // 
             // btnChange
             // 
@@ -72,6 +72,7 @@
             this.btnChange.TabIndex = 2;
             this.btnChange.Text = "Change";
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // rdoNormal
             // 
@@ -83,6 +84,7 @@
             this.rdoNormal.TabStop = true;
             this.rdoNormal.Text = "Normal";
             this.rdoNormal.UseVisualStyleBackColor = true;
+            this.rdoNormal.CheckedChanged += new System.EventHandler(this.rdoNormal_CheckedChanged);
             // 
             // rdoStretchImage
             // 
@@ -94,6 +96,7 @@
             this.rdoStretchImage.TabStop = true;
             this.rdoStretchImage.Text = "StretchImage";
             this.rdoStretchImage.UseVisualStyleBackColor = true;
+            this.rdoStretchImage.CheckedChanged += new System.EventHandler(this.rdoStretchImage_CheckedChanged);
             // 
             // rdoAutoSize
             // 
@@ -105,6 +108,7 @@
             this.rdoAutoSize.TabStop = true;
             this.rdoAutoSize.Text = "AutoSize";
             this.rdoAutoSize.UseVisualStyleBackColor = true;
+            this.rdoAutoSize.CheckedChanged += new System.EventHandler(this.rdoAutoSize_CheckedChanged);
             // 
             // rdoCenterImage
             // 
@@ -116,6 +120,7 @@
             this.rdoCenterImage.TabStop = true;
             this.rdoCenterImage.Text = "CenterImage";
             this.rdoCenterImage.UseVisualStyleBackColor = true;
+            this.rdoCenterImage.CheckedChanged += new System.EventHandler(this.rdoCenterImage_CheckedChanged);
             // 
             // rdoZoom
             // 
@@ -127,6 +132,7 @@
             this.rdoZoom.TabStop = true;
             this.rdoZoom.Text = "Zoom";
             this.rdoZoom.UseVisualStyleBackColor = true;
+            this.rdoZoom.CheckedChanged += new System.EventHandler(this.rdoZoom_CheckedChanged);
             // 
             // chkVisible
             // 
@@ -137,6 +143,7 @@
             this.chkVisible.TabIndex = 8;
             this.chkVisible.Text = "숨기기";
             this.chkVisible.UseVisualStyleBackColor = true;
+            this.chkVisible.CheckedChanged += new System.EventHandler(this.chkVisible_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -153,7 +160,7 @@
             // 
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnChange);
-            this.groupBox2.Controls.Add(this.texUrl);
+            this.groupBox2.Controls.Add(this.txtUrl);
             this.groupBox2.Location = new System.Drawing.Point(6, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(484, 92);
@@ -206,7 +213,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictProfile;
-        private System.Windows.Forms.TextBox texUrl;
+        private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.RadioButton rdoNormal;
         private System.Windows.Forms.RadioButton rdoStretchImage;
