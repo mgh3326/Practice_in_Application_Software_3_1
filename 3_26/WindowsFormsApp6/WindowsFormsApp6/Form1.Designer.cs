@@ -104,12 +104,14 @@
             this.tsmiSave.Name = "tsmiSave";
             this.tsmiSave.Size = new System.Drawing.Size(234, 26);
             this.tsmiSave.Text = "저장(S)";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
             // tsmiSaveAs
             // 
             this.tsmiSaveAs.Name = "tsmiSaveAs";
             this.tsmiSaveAs.Size = new System.Drawing.Size(234, 26);
             this.tsmiSaveAs.Text = "다른 이름으로 저장(A)";
+            this.tsmiSaveAs.Click += new System.EventHandler(this.tsmiSaveAs_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -121,6 +123,7 @@
             this.tsmiExit.Name = "tsmiExit";
             this.tsmiExit.Size = new System.Drawing.Size(234, 26);
             this.tsmiExit.Text = "끝내기(X)";
+            this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
             // 편집ToolStripMenuItem
             // 
@@ -140,48 +143,54 @@
             // tsmiUndo
             // 
             this.tsmiUndo.Name = "tsmiUndo";
-            this.tsmiUndo.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUndo.Size = new System.Drawing.Size(170, 26);
             this.tsmiUndo.Text = "실행 취소(U)";
+            this.tsmiUndo.Click += new System.EventHandler(this.tsmiUndo_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(213, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 6);
             // 
             // tsmiCut
             // 
             this.tsmiCut.Name = "tsmiCut";
-            this.tsmiCut.Size = new System.Drawing.Size(216, 26);
+            this.tsmiCut.Size = new System.Drawing.Size(170, 26);
             this.tsmiCut.Text = "잘라내기(T)";
+            this.tsmiCut.Click += new System.EventHandler(this.tsmiCut_Click);
             // 
             // tsmiCopy
             // 
             this.tsmiCopy.Name = "tsmiCopy";
-            this.tsmiCopy.Size = new System.Drawing.Size(216, 26);
+            this.tsmiCopy.Size = new System.Drawing.Size(170, 26);
             this.tsmiCopy.Text = "복사(C)";
+            this.tsmiCopy.Click += new System.EventHandler(this.tsmiCopy_Click);
             // 
             // tsmiPaste
             // 
             this.tsmiPaste.Name = "tsmiPaste";
-            this.tsmiPaste.Size = new System.Drawing.Size(216, 26);
+            this.tsmiPaste.Size = new System.Drawing.Size(170, 26);
             this.tsmiPaste.Text = "붙여넣기(P)";
+            this.tsmiPaste.Click += new System.EventHandler(this.tsmiPaste_Click);
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDelete.Size = new System.Drawing.Size(170, 26);
             this.tsmiDelete.Text = "삭제(L)";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(213, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(167, 6);
             // 
             // tsmiSelectAll
             // 
             this.tsmiSelectAll.Name = "tsmiSelectAll";
-            this.tsmiSelectAll.Size = new System.Drawing.Size(216, 26);
+            this.tsmiSelectAll.Size = new System.Drawing.Size(170, 26);
             this.tsmiSelectAll.Text = "모두 선택(A)";
+            this.tsmiSelectAll.Click += new System.EventHandler(this.tsmiSelectAll_Click);
             // 
             // 서식ToolStripMenuItem
             // 
@@ -198,31 +207,35 @@
             // tsmiWordWrap
             // 
             this.tsmiWordWrap.Name = "tsmiWordWrap";
-            this.tsmiWordWrap.Size = new System.Drawing.Size(216, 26);
+            this.tsmiWordWrap.Size = new System.Drawing.Size(199, 26);
             this.tsmiWordWrap.Text = "자동 줄 바꿈(W";
+            this.tsmiWordWrap.Click += new System.EventHandler(this.tsmiWordWrap_Click);
             // 
             // tsmiFont
             // 
             this.tsmiFont.Name = "tsmiFont";
-            this.tsmiFont.Size = new System.Drawing.Size(216, 26);
+            this.tsmiFont.Size = new System.Drawing.Size(199, 26);
             this.tsmiFont.Text = "글꼴(F)";
+            this.tsmiFont.Click += new System.EventHandler(this.tsmiFont_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(213, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(196, 6);
             // 
             // tsmiFontColor
             // 
             this.tsmiFontColor.Name = "tsmiFontColor";
-            this.tsmiFontColor.Size = new System.Drawing.Size(216, 26);
+            this.tsmiFontColor.Size = new System.Drawing.Size(199, 26);
             this.tsmiFontColor.Text = "글자색 바꾸기(C)";
+            this.tsmiFontColor.Click += new System.EventHandler(this.tsmiFontColor_Click);
             // 
             // tsmiBackColor
             // 
             this.tsmiBackColor.Name = "tsmiBackColor";
-            this.tsmiBackColor.Size = new System.Drawing.Size(216, 26);
+            this.tsmiBackColor.Size = new System.Drawing.Size(199, 26);
             this.tsmiBackColor.Text = "바탕색 바꾸기(B)";
+            this.tsmiBackColor.Click += new System.EventHandler(this.tsmiBackColor_Click);
             // 
             // ofd
             // 
@@ -250,6 +263,8 @@
             this.MainMenuStrip = this.mns;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.mns.ResumeLayout(false);
             this.mns.PerformLayout();
             this.ResumeLayout(false);
