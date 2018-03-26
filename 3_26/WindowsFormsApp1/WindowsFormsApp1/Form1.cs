@@ -57,6 +57,29 @@ namespace WindowsFormsApp1
         private void rdoOption_CheckedChanged(object sender, EventArgs e)
         {
             //chap 4 p22 보고 해야됨 수업때 못함 이거 하면 위에 함수들을 한번에 동작할수 있다고함
+
+            //해봤는데 이럼 된건가??
+            var rdoOption = sender as RadioButton;
+
+            if (null != rdoOption)
+            {
+                PictureBoxSizeMode SizeMode;
+
+                if (rdoOption == rdoNormal)
+                    SizeMode = PictureBoxSizeMode.Normal;
+                else if (rdoOption == rdoStretchImage)
+                    SizeMode = PictureBoxSizeMode.StretchImage;
+                else if (rdoOption == rdoAutoSize)
+                    SizeMode = PictureBoxSizeMode.AutoSize;
+                else if (rdoOption == rdoCenterImage)
+                    SizeMode = PictureBoxSizeMode.CenterImage;
+                else
+                    SizeMode = PictureBoxSizeMode.Zoom;
+
+                pictProfile.SizeMode = SizeMode;
+            }
         }
+
+        
     }
 }

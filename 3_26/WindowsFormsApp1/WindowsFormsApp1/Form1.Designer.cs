@@ -39,8 +39,8 @@
             this.rdoZoom = new System.Windows.Forms.RadioButton();
             this.chkVisible = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictProfile)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -84,7 +84,7 @@
             this.rdoNormal.TabStop = true;
             this.rdoNormal.Text = "Normal";
             this.rdoNormal.UseVisualStyleBackColor = true;
-            this.rdoNormal.CheckedChanged += new System.EventHandler(this.rdoNormal_CheckedChanged);
+            this.rdoNormal.CheckedChanged += new System.EventHandler(this.rdoOption_CheckedChanged);
             // 
             // rdoStretchImage
             // 
@@ -96,7 +96,7 @@
             this.rdoStretchImage.TabStop = true;
             this.rdoStretchImage.Text = "StretchImage";
             this.rdoStretchImage.UseVisualStyleBackColor = true;
-            this.rdoStretchImage.CheckedChanged += new System.EventHandler(this.rdoStretchImage_CheckedChanged);
+            this.rdoStretchImage.CheckedChanged += new System.EventHandler(this.rdoOption_CheckedChanged);
             // 
             // rdoAutoSize
             // 
@@ -108,7 +108,7 @@
             this.rdoAutoSize.TabStop = true;
             this.rdoAutoSize.Text = "AutoSize";
             this.rdoAutoSize.UseVisualStyleBackColor = true;
-            this.rdoAutoSize.CheckedChanged += new System.EventHandler(this.rdoAutoSize_CheckedChanged);
+            this.rdoAutoSize.CheckedChanged += new System.EventHandler(this.rdoOption_CheckedChanged);
             // 
             // rdoCenterImage
             // 
@@ -120,7 +120,7 @@
             this.rdoCenterImage.TabStop = true;
             this.rdoCenterImage.Text = "CenterImage";
             this.rdoCenterImage.UseVisualStyleBackColor = true;
-            this.rdoCenterImage.CheckedChanged += new System.EventHandler(this.rdoCenterImage_CheckedChanged);
+            this.rdoCenterImage.CheckedChanged += new System.EventHandler(this.rdoOption_CheckedChanged);
             // 
             // rdoZoom
             // 
@@ -132,7 +132,7 @@
             this.rdoZoom.TabStop = true;
             this.rdoZoom.Text = "Zoom";
             this.rdoZoom.UseVisualStyleBackColor = true;
-            this.rdoZoom.CheckedChanged += new System.EventHandler(this.rdoZoom_CheckedChanged);
+            this.rdoZoom.CheckedChanged += new System.EventHandler(this.rdoOption_CheckedChanged);
             // 
             // chkVisible
             // 
@@ -156,6 +156,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "프로필관리";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(6, 134);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(484, 100);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "옵션";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
@@ -167,15 +176,6 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "사진변경";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(6, 134);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(484, 100);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "옵션";
             // 
             // label1
             // 
