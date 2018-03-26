@@ -26,7 +26,7 @@ namespace WindowsFormsApp5
         }
         private void InitializeDataTimePicker()
         {
-            dtpDate.Value = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM") + "-01", "yyy-MM-dd", null);
+            dtpDate.Value = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM") + "-01", "yyyy-MM-dd", null);
             dtpTime.Value = DateTime.ParseExact("00:00:00", "HH:mm:ss", null);
         }
 
