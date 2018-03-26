@@ -29,5 +29,12 @@ namespace WindowsFormsApp4
                 ofd.FileName = "";
             }
         }
+
+        private void tsmiBackColor_Click(object sender, EventArgs e)
+        {
+            cld.Color = BackColor;
+            cld.ShowDialog();
+            BackColor = cld.Color;
+        }
     }
 }
