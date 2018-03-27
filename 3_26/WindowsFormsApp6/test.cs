@@ -1,23 +1,25 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Win32;
-namespace WindowsFormsApp6
+
+namespace notepad
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-            initializeFileDialog();
+            InitializeFileDialog();
         }
-        private void initializeFileDialog()
+        private void InitializeFileDialog()
         {
             ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             ofd.Filter = "Text (*.txt)|*.txt|" + "All files (*.*)|*.*";
@@ -27,6 +29,12 @@ namespace WindowsFormsApp6
             sfd.Filter = ofd.Filter;
             sfd.FileName = "*.txt";
         }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+
+        }
+
         private void tsmiNew_Click(object sender, EventArgs e)
         {
             Text = "Notepad";
@@ -35,20 +43,23 @@ namespace WindowsFormsApp6
 
         private void tsmiOpen_Click(object sender, EventArgs e)
         {
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if(ofd.ShowDialog() == DialogResult.OK)
             {
+                // stream Open
                 Stream stream = ofd.OpenFile();
                 StreamReader sr = new StreamReader(stream);
 
+                //Read file
                 txtNotepad.Text = sr.ReadToEnd();
 
+                //stream Close
                 sr.Close();
                 stream.Close();
 
                 Text = Path.GetFileName(ofd.FileName);
-
             }
         }
+        
         private void tsmiSave_Click(object sender, EventArgs e)
         {
             if (ofd.FileName == "")
@@ -64,15 +75,15 @@ namespace WindowsFormsApp6
 
             sw.Close();
             stream.Close();
-            Text = Path.GetFileName(sfd.FileName);
 
+            Text = Path.GetFileName(sfd.FileName);
         }
         private void tsmiSaveAs_Click(object sender, EventArgs e)
         {
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 ofd.FileName = sfd.FileName;
-                tsmiSave_Click(tsmiSaveAs, EventArgs.Empty);
+                tsmiSave_Click(tsmiSave, EventArgs.Empty);
             }
         }
 
@@ -103,7 +114,7 @@ namespace WindowsFormsApp6
 
         private void tsmiDelete_Click(object sender, EventArgs e)
         {
-            txtNotepad.SelectedText = String.Empty;
+            txtNotepad.SelectedText = string.Empty;
         }
 
         private void tsmiSelectAll_Click(object sender, EventArgs e)
@@ -126,9 +137,7 @@ namespace WindowsFormsApp6
         private void tsmiFontColor_Click(object sender, EventArgs e)
         {
             if (cld.ShowDialog() == DialogResult.OK)
-            {
                 txtNotepad.ForeColor = cld.Color;
-            }
         }
 
         private void tsmiBackColor_Click(object sender, EventArgs e)
@@ -137,17 +146,16 @@ namespace WindowsFormsApp6
                 txtNotepad.BackColor = cld.Color;
         }
 
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveSetting();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadSetting();
         }
+
         private void SaveSetting()
         {
             try
@@ -165,7 +173,6 @@ namespace WindowsFormsApp6
                 rk.SetValue("BackColor", BackColor);
             }
             catch (Exception) { }
-
         }
         private void LoadSetting()
         {
@@ -175,7 +182,6 @@ namespace WindowsFormsApp6
 
                 var FontName = Convert.ToString(rk.GetValue("FontName"));
                 var FontSize = Convert.ToSingle(rk.GetValue("FontSize"));
-
                 var ForeColor = Convert.ToInt32(rk.GetValue("ForeColor"));
                 var BackColor = Convert.ToInt32(rk.GetValue("BackColor"));
 
