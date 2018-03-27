@@ -171,7 +171,7 @@ namespace WindowsFormsApp6
         {
             try
             {
-                RegistryKey rk = Registry.CurrentUser.CreateSubKey(@"C# Notepad\Notepad");
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(@"C# Notepad\Notepad");
 
                 var FontName = Convert.ToString(rk.GetValue("FontName"));
                 var FontSize = Convert.ToString(rk.GetValue("FontSize"));
@@ -180,7 +180,7 @@ namespace WindowsFormsApp6
                 var BackColor = Convert.ToString(rk.GetValue("BackColor"));
 
                 txtNotepad.Font = new System.Drawing.Font(FontName, FontSize);
-                txtNotepad.ForeColor =  System.Drawing.Color.FromArgb(ForeColor);
+                txtNotepad.ForeColor = System.Drawing.Color.FromArgb(ForeColor);
                 txtNotepad.BackColor = System.Drawing.Color.FromArgb(BackColor);
 
                 fnd.Font = txtNotepad.Font;
