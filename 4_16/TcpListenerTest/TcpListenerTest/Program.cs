@@ -19,6 +19,30 @@ namespace TcpListenerTest
                 server.Start();
 
                 //listening loop
+                while (true)
+                {
+                    Console.WriteLine("Waiting for a connection...");
+                    TcpClient client = server.AcceptTcpClient();
+                    Console.WriteLine("Conneted!");
+
+                    DateTime t = DateTime.Now;
+                    // string to byte
+                    string message = string.Format("서버에서 보내는 메세지 {0}", t.ToString("yyyy-MM-dd hh:mm:ss"));
+                    byte[] wrtieBuffer = Encoding.UTF8.GetBytes(message);
+
+                    //int to byte
+                    int bytes = wrtieBuffer.Length;
+                    byte[] wrtieBufferSize = BitConverter.GetBytes(bytes);
+
+                    //send to client
+                    NetworkStream stream = client.GetStream();
+                    //send Buffer
+                    stream.Write(wrtieBufferSize, 0, wrtieBufferSize.Length);
+                    Console.WriteLine("Sent: {0}", message);
+                    stream.Close();
+                    client.Close();
+                    Console.WriteLine();
+                }
             }
             catch (SocketException e)
             {
@@ -29,30 +53,7 @@ namespace TcpListenerTest
                 server.Stop();
             }
             Console.WriteLine("\n서버가 종료됩니다.");
-            //listening loop
-            while (true)
-            {
-                Console.WriteLine("Waiting for a connection...");
-                TcpClient client = server.AcceptTcpClient();
-                Console.WriteLine("Conneted!");
 
-                DateTime t = DateTime.Now;
-                // string to byte
-                string message = string.Format("서버에서 보내는 메세지 {0}", t.ToString("yyyy-MM-dd hh:mm:ss"));
-                byte[] wrtieBuffer = Encoding.UTF8.GetBytes(message);
-
-                //int to byte
-                int bytes = wrtieBuffer.Length;
-                byte[] wrtieBufferSize = BitConverter.GetBytes(bytes);
-
-                //send to client
-                NetworkStream stream = client.GetStream();
-                stream.Write(wrtieBufferSize, 0, wrtieBufferSize.Length);
-                Console.WriteLine("Sent: {0}", message);
-                stream.Close();
-                client.Close();
-                Console.WriteLine();
-            }
         }
     }
 }
