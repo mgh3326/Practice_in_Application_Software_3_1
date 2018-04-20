@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
 
         private void btnList2Checked_Click(object sender, EventArgs e)
         {
-            if (lstLanguages.SelectedItem != null)
+            if (lstLanguages.SelectedItem != null)// listBox1.SelectedIndex >= 0
             {
                 ck1Languages.Items.Add(lstLanguages.SelectedItem, false);
                 lstLanguages.Items.Remove(lstLanguages.SelectedItem);
@@ -29,7 +29,8 @@ namespace WindowsFormsApp2
         {
             while (ck1Languages.CheckedItems.Count > 0)
             {
-                string item = (string)ck1Languages.CheckedItems[0];
+				// object item = checkedListBox1.CheckedItems[0];
+                string item = (string)ck1Languages.CheckedItems[0];//checkedListBox1.CheckedItems[0].ToString();
                 lstLanguages.Items.Add(item);
                 ck1Languages.Items.Remove(item);
             }

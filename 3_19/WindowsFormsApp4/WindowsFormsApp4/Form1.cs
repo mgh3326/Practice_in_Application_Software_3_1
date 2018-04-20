@@ -30,9 +30,11 @@ namespace WindowsFormsApp4
             lvwPeopleInfo.Columns.Add("Gender", "Gender");
             lvwPeopleInfo.Columns.Add("last", "last");
 
+			//Width HeadingSize로 자동조절 ( 맨 마지막 Column Item은 ListView 꽉차게)
             lvwPeopleInfo.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             lvwPeopleInfo.Columns.RemoveByKey("last");
 
+			// Alignment
             lvwPeopleInfo.Columns[0].TextAlign = HorizontalAlignment.Left;
             lvwPeopleInfo.Columns["Age"].TextAlign = HorizontalAlignment.Center;
             lvwPeopleInfo.Columns[2].TextAlign = HorizontalAlignment.Right;
@@ -50,6 +52,7 @@ namespace WindowsFormsApp4
             else if (cmbGender.SelectedItem == null) return ControlParseCase.Gender;
             return ControlParseCase.None;
         }
+		//Precondition: IsContorIPaseComplete() == ControlParseException.None
         private Dictionary<string, string> GetControlParseDict()
         {
             return new Dictionary<string, string>()
@@ -70,6 +73,8 @@ namespace WindowsFormsApp4
 
             var controlParseDict = GetControlParseDict();
 
+			//foreach (ColumnHeader item in lvwPeopleInfo.Columns)
+			// lvwItem.SubItems[item.Name].Text = headerDict[item.Name];
             foreach (string item in controlParseDict.Keys)
                 lvwItem.SubItems[item].Text = controlParseDict[item];
 

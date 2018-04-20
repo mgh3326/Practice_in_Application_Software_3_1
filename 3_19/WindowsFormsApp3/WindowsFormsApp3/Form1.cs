@@ -17,18 +17,19 @@ namespace WindowsFormsApp3
         }
         public enum ComboBoxParseCase
         {
-            None,
-            Year,
-            Month,
-            Day,
-            Combine
-        }
+            None,//아래 모든 경우를 제외한 경우
+            Year,//year 파싱불가
+            Month, //month 파싱불가
+			Day, //day 파싱불가
+			Combine //존재하지 않는 날짜
+		}
 
         private void Form1_Load(object sender, EventArgs e)
         {
             DateTime localDate = DateTime.Now;
             for (int i = localDate.Year - 1000; i <= localDate.Year + 1000; i++) cmbYear.Items.Add(i);
             cmbYear.SelectedIndex = cmbYear.Items.Count - 1;
+
             for (int i = 1; i <= 12; i++) cmbMonth.Items.Add(i);
             for (int i = 1; i <= 31; i++) cmbDay.Items.Add(i);
         }
@@ -41,7 +42,8 @@ namespace WindowsFormsApp3
             if (cmbYear.SelectedItem == null) return ComboBoxParseCase.Year;
             else if (cmbMonth.SelectedItem == null) return ComboBoxParseCase.Month;
             else if (cmbDay.SelectedItem == null) return ComboBoxParseCase.Day;
-            else if (!IsDate((int)cmbYear.SelectedItem,
+			else if (cmbDay.SelectedItem == null) return ComboBoxParseCase.Day;
+			else if (!IsDate((int)cmbYear.SelectedItem,
                 (int)cmbMonth.SelectedItem,
                 (int)cmbDay.SelectedItem))
                 return ComboBoxParseCase.Combine;
@@ -63,7 +65,7 @@ namespace WindowsFormsApp3
                 case ComboBoxParseCase.Combine:
                     labelToggle.Text = "생년월일을 다시 확인해주세요.";
                     break;
-                default:
+                default://ComboException.None
                     labelToggle.Text = "";
                     break;
             }
