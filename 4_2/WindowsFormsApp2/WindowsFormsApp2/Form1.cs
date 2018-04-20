@@ -29,19 +29,41 @@ namespace WindowsFormsApp2
             child.Text = "NONAME" + nChild++;
             child.Show();
         }
+		private void 열기ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if(openFDlg.ShowDialog() == DialogResult.OK)
+			{
+				
+				Stream str = openFDlg.OpenFile();
+				StreamReader reader = new StreamReader(str);
+
+				child = new Child();
+				child.MdiParent = this;
+				child.Text = "NONAME" + nChild++;
+				child. Show();
+
+				child.getTextBox().Text = reader.ReadToEnd();
+				reader.Close();
+				str.Close();
+			}
 
 
-        private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
+		}
+
+		private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                child = (Child)(this.ActiveMidChild);
-                Stream fName = Child.Text;
-                StreamWriter writer new= StreamWriter(fName);
-                write.Write(Child.getTextBox())
-            }
-        }
+			if (saveFDlg.ShowDialog() == DialogResult.OK)
+			{
+				child = (Child)(this.ActiveMdiChild);
+				string fName = child.Text;
+				StreamWriter write = new StreamWriter(Name);
+				write.Write(child.getTextBox().Text);
+				write.Close();
+			}
+				
 
-        
-    }
+		}
+
+
+	}
 }
