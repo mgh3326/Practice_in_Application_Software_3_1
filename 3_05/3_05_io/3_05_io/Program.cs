@@ -10,7 +10,7 @@ namespace _3_05_io
         static void Main(string[] args)
         {
             string strName;
-            Console.WriteLine("당신의 이름은 ? ");
+            Console.Write("당신의 이름은 ? ");
             strName = Console.ReadLine();
 
             Console.WriteLine("Hello, {0} !", strName);
