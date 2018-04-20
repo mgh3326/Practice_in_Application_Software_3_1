@@ -16,7 +16,7 @@ namespace NullErrorCatch
                 Console.WriteLine("Program Termiated");
 
             }
-            catch (NullReferenceException e)
+            catch (NullReferenceException e) // 에러처리
             {
                 Console.WriteLine(e.ToString());
             }

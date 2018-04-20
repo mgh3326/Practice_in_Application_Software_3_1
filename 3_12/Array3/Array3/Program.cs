@@ -14,10 +14,7 @@ namespace Array3
             Console.WriteLine("{0}", arr.GetLength(1));
             Console.WriteLine("{0}", arr.Length);
             Console.WriteLine("{0}" + "차원", arr.Rank);
-            Console.WriteLine(Type(arr.Length));
-
-            
-            
+            // Console.WriteLine(Type(arr.Length));            
         }
     }
 }
