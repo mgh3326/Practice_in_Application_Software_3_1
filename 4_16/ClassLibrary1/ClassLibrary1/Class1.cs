@@ -10,17 +10,19 @@ namespace ClassLibrary1
 {
     public class Class1
     {
-        public enum PacketType
-        {
-            초기화 = 0,
-            로그인
-        }
-        public enum PacketSendERROR
-        {
-            정상 = 0,
-            에러
-        }
+
     }
+    public enum PacketType
+    {
+        초기화 = 0,
+        로그인
+    }
+    public enum PacketSendERROR
+    {
+        정상 = 0,
+        에러
+    }
+    
     [Serializable]
     public class Packet
     {
@@ -36,7 +38,7 @@ namespace ClassLibrary1
         {
             MemoryStream ms = new MemoryStream(1024 * 4);
             BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(ms, 0);
+            bf.Serialize(ms, o);//0->o
             return ms.ToArray();
         }
         public static Object Desserialize(byte[] bt)
