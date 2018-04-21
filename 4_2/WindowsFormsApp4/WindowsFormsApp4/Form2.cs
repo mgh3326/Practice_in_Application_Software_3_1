@@ -30,19 +30,22 @@ namespace WindowsFormsApp4
             {
                 if (this.btnApply.Enabled == true)
                 {
-
+                    Changed(this, new EventArgs());
                 }
             }
         }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-
+            if (Changed != null)
+            {
+                Changed(this, new EventArgs());
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
