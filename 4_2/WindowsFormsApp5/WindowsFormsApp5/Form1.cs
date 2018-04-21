@@ -73,10 +73,8 @@ namespace WindowsFormsApp5
                     m_nPlusCount++;
                     //label2.Text = Convert.ToString(m_nPlusCount);
                     Invoke(delegateShowTextInstance, new object[] { "label2", Convert.ToString(m_nPlusCount) });
-
                 }
             }
-
         }
         private void ThreadMinus()
         {
