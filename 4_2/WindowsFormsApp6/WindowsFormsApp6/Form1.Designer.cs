@@ -100,7 +100,7 @@
             this.listView1.LargeImageList = this.imgList;
             this.listView1.Location = new System.Drawing.Point(124, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(676, 241);
+            this.listView1.Size = new System.Drawing.Size(676, 385);
             this.listView1.SmallImageList = this.imgList;
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -116,45 +116,45 @@
             this.mnuSmall,
             this.mnuLarge});
             this.cmuListView.Name = "contextMenuStrip1";
-            this.cmuListView.Size = new System.Drawing.Size(211, 158);
+            this.cmuListView.Size = new System.Drawing.Size(159, 130);
             // 
             // mnuOpen
             // 
             this.mnuOpen.Name = "mnuOpen";
-            this.mnuOpen.Size = new System.Drawing.Size(210, 24);
+            this.mnuOpen.Size = new System.Drawing.Size(158, 24);
             this.mnuOpen.Text = "열기";
             this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(155, 6);
             // 
             // mnuDetail
             // 
             this.mnuDetail.Name = "mnuDetail";
-            this.mnuDetail.Size = new System.Drawing.Size(210, 24);
+            this.mnuDetail.Size = new System.Drawing.Size(158, 24);
             this.mnuDetail.Text = "자세히";
             this.mnuDetail.Click += new System.EventHandler(this.mnuView_Click);
             // 
             // mnuList
             // 
             this.mnuList.Name = "mnuList";
-            this.mnuList.Size = new System.Drawing.Size(210, 24);
+            this.mnuList.Size = new System.Drawing.Size(158, 24);
             this.mnuList.Text = "간단히";
             this.mnuList.Click += new System.EventHandler(this.mnuView_Click);
             // 
             // mnuSmall
             // 
             this.mnuSmall.Name = "mnuSmall";
-            this.mnuSmall.Size = new System.Drawing.Size(210, 24);
+            this.mnuSmall.Size = new System.Drawing.Size(158, 24);
             this.mnuSmall.Text = "작은 아이콘";
             this.mnuSmall.Click += new System.EventHandler(this.mnuView_Click);
             // 
             // mnuLarge
             // 
             this.mnuLarge.Name = "mnuLarge";
-            this.mnuLarge.Size = new System.Drawing.Size(210, 24);
+            this.mnuLarge.Size = new System.Drawing.Size(158, 24);
             this.mnuLarge.Text = "큰 아이콘";
             this.mnuLarge.Click += new System.EventHandler(this.mnuView_Click);
             // 
@@ -174,7 +174,7 @@
             this.treeView1.Location = new System.Drawing.Point(0, 3);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(121, 218);
+            this.treeView1.Size = new System.Drawing.Size(121, 385);
             this.treeView1.TabIndex = 3;
             // 
             // lvwFiles
