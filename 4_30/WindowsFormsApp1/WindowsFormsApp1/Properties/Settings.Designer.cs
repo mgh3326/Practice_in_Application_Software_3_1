@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Packet_server.Properties
+namespace WindowsFormsApp1.Properties
 {
 
 

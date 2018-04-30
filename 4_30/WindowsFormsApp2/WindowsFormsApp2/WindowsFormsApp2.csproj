@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66754470-57DF-47C2-9A0B-487DAF7F640E}</ProjectGuid>
+    <ProjectGuid>{10732851-217A-49B5-B9FF-F5A23C48C0BD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Packet_server</RootNamespace>
-    <AssemblyName>Packet_server</AssemblyName>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>WindowsFormsApp2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassLibrary1">
-      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

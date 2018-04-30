@@ -18,7 +18,7 @@ namespace TcpClientTest
             try
             {
                 client = new TcpClient();
-                IPAddress locAddr = IPAddress.Parse("127.0.0.1"); int port = 13000;
+                IPAddress locAddr = IPAddress.Parse("192.168.56.1"); int port = 13001;
                 client.Connect(locAddr, port);
 
                 NetworkStream stream = client.GetStream();
