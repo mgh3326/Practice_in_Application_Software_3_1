@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
         private void 새로만들기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             child = new Child();
-            child.MidParent = this;//이거 안되서 아마 새로 만들거 같다.
+            child.MdiParent = this;//이거 안되서 아마 새로 만들거 같다.
             child.Text = "NONAME" + nChild++;
             child.Show();
         }

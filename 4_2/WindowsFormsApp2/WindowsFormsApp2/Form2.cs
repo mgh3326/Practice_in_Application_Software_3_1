@@ -16,7 +16,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        public Parent MidParent { get; internal set; }
+        //public Parent MidParent { get; internal set; }//이거 뭐하는 걸까?
 
         public TextBox getTextBox()
         {
