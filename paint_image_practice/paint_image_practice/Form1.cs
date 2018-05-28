@@ -24,7 +24,15 @@ namespace paint_image_practice
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(odlg.ShowDialog()==DialogResult.OK)
+            {
+                imageHandler.CurrentBitmap = (Bitmap)Bitmap.FromFile(odlg.FileName);
+                imageHandler.BitmapPath = odlg.FileName;
+                this.AutoScroll = true;
+                this.AutoScrollMinSize = new Size(Convert.ToInt32(imageHandler.CurrentBitmap.Width * ZoomFactor),
+                Convert.ToInt32(imageHandler.CurrentBitmap.Height * ZoomFactor));
+                this.Invalidate();
+            }
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
