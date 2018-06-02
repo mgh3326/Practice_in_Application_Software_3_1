@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 
     public partial class Form1 : Form
     {
-        private Random rand;
+        private Random rand;//랜덤 객체 생성
         private int X;
         private int Y;
 
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             Y = (int)this.Height - 140;
 
             DateTime currentTime = DateTime.Now;
-            rand = new Random(currentTime.Millisecond);
+            rand = new Random(currentTime.Millisecond);//랜덤 객체 생성
 
             timer1.Interval = 2000;
             timer1.Enabled = true;
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
             Pen redPen = new Pen(Color.IndianRed);
             SolidBrush redBr = new SolidBrush(Color.IndianRed);
             SolidBrush whiteBr = new SolidBrush(Color.White);
-
+            //눈사람 그리기
             g.FillEllipse(whiteBr, X, Y, 100, 100);
             Y -= 80;
             X += 10;
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             Y -= 60;
             X += 10;
             g.FillEllipse(whiteBr, X, Y, 60, 60);
-
+            // 모자 그리기
             g.DrawLine(redPen, X - 10, Y, 60, 60);
             g.FillRectangle(redBr, X + 10, Y - 40, 40, 40);
         }
@@ -64,8 +64,8 @@ namespace WindowsFormsApp1
         private void timer1_Tick(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
-
-            for(int i=0;i<400;i++)
+            //눈 뿌리기
+            for (int i = 0; i < 400; i++)
             {
                 X = rand.Next(1, this.Width);
                 Y = rand.Next(1, this.Height);

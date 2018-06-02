@@ -17,21 +17,6 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void booksTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void periodicalsTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void foodsTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void clearBTN_Click(object sender, EventArgs e)
         {
             SolidBrush clearBrush = new SolidBrush(Form1.DefaultBackColor);
@@ -65,7 +50,7 @@ namespace WindowsFormsApp3
                     periodicalSales = Decimal.Parse(periodicalsTB.Text);
                     try
                     {
-                        foodSales = decimal.Parse(foodsTB.Text);
+                        foodSales = Decimal.Parse(foodsTB.Text);
                         totalSales = bookSales + periodicalSales + foodSales;
 
                         SolidBrush bookBr = new SolidBrush(Color.Blue);
@@ -79,7 +64,7 @@ namespace WindowsFormsApp3
                             int endPeriodical = (int)(periodicalSales / totalSales * 360);
                             g.FillPie(periodcalBr, 130, 110, 100, 100, endBook, endPeriodical);
                             int endFood = (int)(foodSales / totalSales * 360);
-                            g.FillPie(foodBr, 130, 110, 100, 100, endPeriodical+ endBook, endFood);
+                            g.FillPie(foodBr, 130, 110, 100, 100, endPeriodical + endBook, endFood);
                         }
                     }
                     catch

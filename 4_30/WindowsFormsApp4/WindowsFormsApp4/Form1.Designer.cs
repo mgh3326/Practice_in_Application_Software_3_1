@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolBar1 = new System.Windows.Forms.ToolBar();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.newButton = new System.Windows.Forms.ToolBarButton();
             this.lineButton = new System.Windows.Forms.ToolBarButton();
             this.rectButton = new System.Windows.Forms.ToolBarButton();
@@ -40,6 +39,7 @@
             this.line1Button = new System.Windows.Forms.ToolBarButton();
             this.line2Button = new System.Windows.Forms.ToolBarButton();
             this.line3Button = new System.Windows.Forms.ToolBarButton();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -62,19 +62,6 @@
             this.toolBar1.Size = new System.Drawing.Size(800, 28);
             this.toolBar1.TabIndex = 0;
             this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "circle_image.png");
-            this.imageList1.Images.SetKeyName(1, "line_image.png");
-            this.imageList1.Images.SetKeyName(2, "line0_image.png");
-            this.imageList1.Images.SetKeyName(3, "line1_image.png");
-            this.imageList1.Images.SetKeyName(4, "line2_image.png");
-            this.imageList1.Images.SetKeyName(5, "line3_image.png");
-            this.imageList1.Images.SetKeyName(6, "new_image.png");
-            this.imageList1.Images.SetKeyName(7, "rect_image.png");
             // 
             // newButton
             // 
@@ -116,11 +103,25 @@
             this.line3Button.ImageIndex = 7;
             this.line3Button.Name = "line3Button";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "circle_image.png");
+            this.imageList1.Images.SetKeyName(1, "line_image.png");
+            this.imageList1.Images.SetKeyName(2, "line0_image.png");
+            this.imageList1.Images.SetKeyName(3, "line1_image.png");
+            this.imageList1.Images.SetKeyName(4, "line2_image.png");
+            this.imageList1.Images.SetKeyName(5, "line3_image.png");
+            this.imageList1.Images.SetKeyName(6, "new_image.png");
+            this.imageList1.Images.SetKeyName(7, "rect_image.png");
+            // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 34);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 235);
+            this.panel1.Size = new System.Drawing.Size(800, 422);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);

@@ -34,3 +34,16 @@ namespace DataSet
         }
     }
 }
+//  DataSet 객체
+//  기능
+//  하나의 Database
+//  테이블 구조 정보, 필드 정보, 기본키, 데이터 관계 규약 정보
+
+//  DataTable 
+//  DataSet 의 여러 테이블 중 특정 Table 에는 Indexer 를 이용하여 접근 함
+//  Table 의 이름을 string 형으로 넣음
+
+//  데이터의 속성을 나타내는 열(Column) 부분은 Table.Column.Add(new DataColumn(“name”, typeof(type)) 으로 추가
+
+//  실제 데이터들을 나타내는 행(Row) 부분은 Table.Row.Add(new object[] { data1, data2, data3/… }} 으로 추가
+

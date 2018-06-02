@@ -17,22 +17,27 @@ namespace async_await2
             InitializeComponent();
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        async private void btnStart_Click(object sender, EventArgs e)
         {
             ulong t1 = await Task<ulong>.Factory.StartNew(() =>
-              {
-                
-              ulong acc = 0; ulong n = 10001;
-              for (ulong i = 0; i < n; i++)
-                  for (ulong j = 0; j < n; j++)
-                      acc += i * j + 1;
+            {
+                //very long running time
+                ulong acc = 0; ulong n = 10001;
+                for (ulong i = 0; i < n; i++)
+                {
+                    for (ulong j = 0; j < n; j++)
+                        acc += i * j + 1;
 
-                  lblLog.Invoke((MethodInvoker)( ()=>lblLog.Text = string.Format("0:N0}", acc) ));
-            pbLog.Invoke((MethodInvoker)( ()=> pbLog.Value = Convert.ToInt32(int * 100.0 / n)));
-        }
-        return acc;
+                    lblLog.Invoke((MethodInvoker)(() => lblLog.Text = string.Format("{0:N0}", acc)));
+                    pbLog.Invoke((MethodInvoker)(() => pbLog.Value = Convert.ToInt32(i * 100.0 / n)));
+                }
+                return acc;
+
+
             });
-    lblLog.Text=string.Format("{0:NO}", t1);
+            lblLog.Text = string.Format("{0:NO}", t1);
         }
     }
+}
+    
 

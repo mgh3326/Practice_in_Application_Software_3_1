@@ -84,3 +84,23 @@ namespace IEnumerable_interface
         }
     }
 }
+//  사용자 정의 Collection 에서 열거 기능을 지원하게 함
+//  GetEnumerator() 메서드를 구현하면 된다.
+
+//  Enumerator 는 IEnumerator 를 구현하여 만들 수 있다.
+//  내부의 데이터를 순방향으로 접근할 수 있는 기능을 가짐
+
+//  사용자 정의 Collection 클래스에 IEnumerable을 구현하게 되면 클래스의 내부 데이터를 foreach문으로 조회할 수 있다
+
+
+//  사용 예시
+//  구현해야 할 항목
+//  열거할 데이터 class (primitive type 이거나 이미 정의 된 경우에는 필요 없음)
+//  IEnumerable 을 구현한 데이터를 모아놓는 class
+//  Enumerator 를 반환하는 GetEnumerator() 구현
+//  IEnumerator 를 구현한 Enumerator 를 리턴하는 class
+//  index 역할을 하는 정수형 position 변수를 두어 index 를 관리
+//  position을 1 높이고, 다음자료의 position으로 이동하는데 성공했는지 bool 로 알려주는 MoveNext () 메서드를 구현
+//  index 를 초기화 하는 Reset() 메서드 구현
+//  현재 position 을 index 로 하는 데이터를 반환하는 Current Property 구현
+

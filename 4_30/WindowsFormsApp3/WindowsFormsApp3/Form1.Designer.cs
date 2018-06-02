@@ -46,7 +46,6 @@
             this.booksTB.Name = "booksTB";
             this.booksTB.Size = new System.Drawing.Size(100, 25);
             this.booksTB.TabIndex = 0;
-            this.booksTB.TextChanged += new System.EventHandler(this.booksTB_TextChanged);
             // 
             // periodicalsTB
             // 
@@ -54,7 +53,6 @@
             this.periodicalsTB.Name = "periodicalsTB";
             this.periodicalsTB.Size = new System.Drawing.Size(100, 25);
             this.periodicalsTB.TabIndex = 1;
-            this.periodicalsTB.TextChanged += new System.EventHandler(this.periodicalsTB_TextChanged);
             // 
             // foodsTB
             // 
@@ -62,40 +60,39 @@
             this.foodsTB.Name = "foodsTB";
             this.foodsTB.Size = new System.Drawing.Size(100, 25);
             this.foodsTB.TabIndex = 2;
-            this.foodsTB.TextChanged += new System.EventHandler(this.foodsTB_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Books";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Periodicals";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(29, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.label3.Text = "Foods";
             // 
             // displayBTN
             // 
-            this.displayBTN.Location = new System.Drawing.Point(32, 171);
+            this.displayBTN.Location = new System.Drawing.Point(32, 152);
             this.displayBTN.Name = "displayBTN";
-            this.displayBTN.Size = new System.Drawing.Size(75, 23);
+            this.displayBTN.Size = new System.Drawing.Size(76, 33);
             this.displayBTN.TabIndex = 6;
             this.displayBTN.Text = "Display";
             this.displayBTN.UseVisualStyleBackColor = true;
@@ -103,7 +100,7 @@
             // 
             // clearBTN
             // 
-            this.clearBTN.Location = new System.Drawing.Point(32, 200);
+            this.clearBTN.Location = new System.Drawing.Point(33, 191);
             this.clearBTN.Name = "clearBTN";
             this.clearBTN.Size = new System.Drawing.Size(75, 23);
             this.clearBTN.TabIndex = 7;
@@ -113,7 +110,7 @@
             // 
             // exitBTN
             // 
-            this.exitBTN.Location = new System.Drawing.Point(32, 229);
+            this.exitBTN.Location = new System.Drawing.Point(33, 220);
             this.exitBTN.Name = "exitBTN";
             this.exitBTN.Size = new System.Drawing.Size(75, 23);
             this.exitBTN.TabIndex = 8;
@@ -124,17 +121,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 277);
+            this.label4.Location = new System.Drawing.Point(29, 272);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(302, 15);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Books: Blue, Preiodicals : Yello, Food : Red";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 325);
+            this.ClientSize = new System.Drawing.Size(358, 335);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.exitBTN);
             this.Controls.Add(this.clearBTN);
