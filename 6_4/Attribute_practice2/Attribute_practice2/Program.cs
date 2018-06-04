@@ -28,7 +28,7 @@ namespace Attribute_practice2
     }
 
     [History("Kim", version = 0.1, changes = "2017-04-01 Create Class")]
-    [History("Lee", version = 0.2, changes = "2017 - 04 - 02 Added Func() Method")]
+    [History("Lee", version = 0.2, changes = "2017-04-02 Added Func() Method")]
     class TargetClass
     {
         public void Func()
