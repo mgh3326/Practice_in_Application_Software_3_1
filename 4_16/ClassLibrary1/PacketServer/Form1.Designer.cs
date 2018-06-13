@@ -38,6 +38,7 @@
             this.txt_server_state.Name = "txt_server_state";
             this.txt_server_state.Size = new System.Drawing.Size(655, 413);
             this.txt_server_state.TabIndex = 0;
+            this.txt_server_state.TextChanged += new System.EventHandler(this.txt_server_state_TextChanged);
             // 
             // Form1
             // 

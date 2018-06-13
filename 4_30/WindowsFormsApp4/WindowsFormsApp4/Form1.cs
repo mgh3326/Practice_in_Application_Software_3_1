@@ -183,14 +183,14 @@ namespace WindowsFormsApp4
 
             for (i = 0; i <= nrect; i++)
             {
-                if (!mylines[i].getSolid())
+                if (!myrect[i].getSolid())
                 {
                     pen.Width = 1;
                     pen.DashStyle = DashStyle.Dot;
                 }
                 else
                 {
-                    pen.Width = mylines[i].getThick();
+                    pen.Width = myrect[i].getThick();
                     pen.DashStyle = DashStyle.Solid;
                 }
                 e.Graphics.DrawRectangle(pen, myrect[i].getRect());
@@ -198,14 +198,14 @@ namespace WindowsFormsApp4
             }
             for (i = 0; i <= ncircle; i++)
             {
-                if (!mylines[i].getSolid())
+                if (!mycircle[i].getSolid())
                 {
                     pen.Width = 1;
                     pen.DashStyle = DashStyle.Dot;
                 }
                 else
                 {
-                    pen.Width = mylines[i].getThick();
+                    pen.Width = mycircle[i].getThick();
                     pen.DashStyle = DashStyle.Solid;
                 }
                 e.Graphics.DrawEllipse(pen, mycircle[i].getRectC());

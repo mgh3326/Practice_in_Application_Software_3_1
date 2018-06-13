@@ -109,5 +109,10 @@ namespace PacketServer
             this.m_networkstream.Close();
             this.m_thread.Abort();
         }
+
+        private void txt_server_state_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
